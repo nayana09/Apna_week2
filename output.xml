@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211203 00:17:22.793" rpa="false" schemaversion="2">
+<suite id="s1" name="Test" source="C:\Users\NAYANA K\Desktop\Moolya assesment\APNA\test cases\week2\Test\test.robot">
+<test id="s1-t1" name="user should be able to search in Apna application">
+<kw name="Launch the Apna Application">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${mir_server}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>platformVersion=${platformVersion}</arg>
+<arg>deviceName=${deviceName}</arg>
+<arg>appActivity=${app_activity}</arg>
+<arg>appPackage=${app_package}</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20211203 00:17:23.141" endtime="20211203 00:17:39.906"/>
+</kw>
+<status status="PASS" starttime="20211203 00:17:23.141" endtime="20211203 00:17:39.906"/>
+</kw>
+<status status="PASS" starttime="20211203 00:17:23.140" endtime="20211203 00:17:39.907"/>
+</test>
+<test id="s1-t2" name="User need to login and get otp">
+<kw name="OTPs and phone number should be generated randomly for staging environment">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Login}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20211203 00:17:39.912" endtime="20211203 00:17:44.403"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:17:47.407" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:17:44.403" endtime="20211203 00:17:47.407"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${Login}</arg>
+<arg>7456677885</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211203 00:17:47.410" level="INFO">Typing text '7456677885' into text field 'id=com.apnatime.debug:id/et_login_number'</msg>
+<status status="PASS" starttime="20211203 00:17:47.408" endtime="20211203 00:17:48.169"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:17:51.182" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:17:48.169" endtime="20211203 00:17:51.182"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<arg>Login.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20211203 00:17:51.533" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Login.png"&gt;&lt;img src="Login.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211203 00:17:51.182" endtime="20211203 00:17:51.533"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:17:54.546" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:17:51.533" endtime="20211203 00:17:54.546"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${send}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:17:54.548" level="INFO">Clicking element 'id=com.apnatime.debug:id/btn_send'.</msg>
+<status status="PASS" starttime="20211203 00:17:54.546" endtime="20211203 00:17:54.637"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:17:57.640" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:17:54.637" endtime="20211203 00:17:57.640"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${enter_otp}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211203 00:17:57.640" endtime="20211203 00:17:58.927"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${otp1}</arg>
+<arg>3</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211203 00:17:58.931" level="INFO">Typing text '3' into text field 'id=com.apnatime.debug:id/et_otp1'</msg>
+<status status="PASS" starttime="20211203 00:17:58.927" endtime="20211203 00:17:59.029"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${otp2}</arg>
+<arg>1</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211203 00:17:59.031" level="INFO">Typing text '1' into text field 'id=com.apnatime.debug:id/et_otp2'</msg>
+<status status="PASS" starttime="20211203 00:17:59.029" endtime="20211203 00:17:59.953"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${otp3}</arg>
+<arg>3</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211203 00:17:59.956" level="INFO">Typing text '3' into text field 'id=com.apnatime.debug:id/et_otp3'</msg>
+<status status="PASS" starttime="20211203 00:17:59.953" endtime="20211203 00:18:00.953"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${otp4}</arg>
+<arg>4</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211203 00:18:00.955" level="INFO">Typing text '4' into text field 'id=com.apnatime.debug:id/et_otp4'</msg>
+<status status="PASS" starttime="20211203 00:18:00.954" endtime="20211203 00:18:01.963"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:18:04.978" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:18:01.963" endtime="20211203 00:18:04.978"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<arg>otp.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20211203 00:18:05.806" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="otp.png"&gt;&lt;img src="otp.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211203 00:18:04.978" endtime="20211203 00:18:05.807"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:18:10.809" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211203 00:18:05.807" endtime="20211203 00:18:10.809"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="English"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:18:10.815" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="English"]'.</msg>
+<status status="PASS" starttime="20211203 00:18:10.809" endtime="20211203 00:18:11.220"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:18:16.222" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211203 00:18:11.221" endtime="20211203 00:18:16.222"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/btn_continue</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:18:16.225" level="INFO">Clicking element 'id=com.apnatime.debug:id/btn_continue'.</msg>
+<status status="PASS" starttime="20211203 00:18:16.223" endtime="20211203 00:18:16.341"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:18:21.342" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211203 00:18:16.341" endtime="20211203 00:18:21.342"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.Button[@text="Let’s go!"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:18:21.345" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="Let’s go!"]'.</msg>
+<status status="PASS" starttime="20211203 00:18:21.343" endtime="20211203 00:18:21.474"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:18:26.490" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211203 00:18:21.474" endtime="20211203 00:18:26.490"/>
+</kw>
+<status status="PASS" starttime="20211203 00:17:39.911" endtime="20211203 00:18:26.490"/>
+</kw>
+<status status="PASS" starttime="20211203 00:17:39.910" endtime="20211203 00:18:26.491"/>
+</test>
+<test id="s1-t3" name="User need to create their profile">
+<kw name="Positive Scenarios on User Registration Feilds">
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${name}</arg>
+<arg>Nayana K</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211203 00:18:26.497" level="INFO">Typing text 'Nayana K' into text field 'id=com.apnatime.debug:id/act_profile_info_et_full_name'</msg>
+<status status="PASS" starttime="20211203 00:18:26.494" endtime="20211203 00:18:27.213"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/act_profile_info_et_city</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:18:27.215" level="INFO">Clicking element 'id=com.apnatime.debug:id/act_profile_info_et_city'.</msg>
+<status status="PASS" starttime="20211203 00:18:27.213" endtime="20211203 00:18:27.894"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:18:32.905" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211203 00:18:27.894" endtime="20211203 00:18:32.905"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Bengaluru"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:18:32.907" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="Bengaluru"]'.</msg>
+<status status="PASS" starttime="20211203 00:18:32.905" endtime="20211203 00:18:33.410"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:18:38.416" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211203 00:18:33.411" endtime="20211203 00:18:38.416"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/act_profile_info_et_location</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:18:38.418" level="INFO">Clicking element 'id=com.apnatime.debug:id/act_profile_info_et_location'.</msg>
+<status status="PASS" starttime="20211203 00:18:38.416" endtime="20211203 00:18:38.994"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:18:43.998" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211203 00:18:38.995" endtime="20211203 00:18:43.998"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Acharya College"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:18:44.009" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="Acharya College"]'.</msg>
+<status status="PASS" starttime="20211203 00:18:43.999" endtime="20211203 00:18:44.608"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:18:49.610" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211203 00:18:44.609" endtime="20211203 00:18:49.610"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/btn_gender_female</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:18:49.612" level="INFO">Clicking element 'id=com.apnatime.debug:id/btn_gender_female'.</msg>
+<status status="PASS" starttime="20211203 00:18:49.610" endtime="20211203 00:18:50.277"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:18:55.285" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211203 00:18:50.277" endtime="20211203 00:18:55.285"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/act_profile_info_btn_continue</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:18:55.287" level="INFO">Clicking element 'id=com.apnatime.debug:id/act_profile_info_btn_continue'.</msg>
+<status status="PASS" starttime="20211203 00:18:55.285" endtime="20211203 00:18:55.377"/>
+</kw>
+<status status="PASS" starttime="20211203 00:18:26.494" endtime="20211203 00:18:55.377"/>
+</kw>
+<status status="PASS" starttime="20211203 00:18:26.493" endtime="20211203 00:18:55.378"/>
+</test>
+<test id="s1-t4" name="User need to create there work experience">
+<kw name="User work experience as fresher">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:19:00.386" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211203 00:18:55.381" endtime="20211203 00:19:00.386"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/act_education_btn_fresher</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:00.391" level="INFO">Clicking element 'id=com.apnatime.debug:id/act_education_btn_fresher'.</msg>
+<status status="PASS" starttime="20211203 00:19:00.386" endtime="20211203 00:19:01.312"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:19:06.316" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211203 00:19:01.312" endtime="20211203 00:19:06.316"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/act_education_btn_continue</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:06.318" level="INFO">Clicking element 'id=com.apnatime.debug:id/act_education_btn_continue'.</msg>
+<status status="PASS" starttime="20211203 00:19:06.316" endtime="20211203 00:19:06.393"/>
+</kw>
+<status status="PASS" starttime="20211203 00:18:55.381" endtime="20211203 00:19:06.393"/>
+</kw>
+<status status="PASS" starttime="20211203 00:18:55.380" endtime="20211203 00:19:06.394"/>
+</test>
+<test id="s1-t5" name="User Need to give his/her edu details">
+<kw name="User educ details">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:19:11.411" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211203 00:19:06.397" endtime="20211203 00:19:11.411"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/et_education</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:11.415" level="INFO">Clicking element 'id=com.apnatime.debug:id/et_education'.</msg>
+<status status="PASS" starttime="20211203 00:19:11.411" endtime="20211203 00:19:12.007"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/tv_education_detail_info</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:12.011" level="INFO">Clicking element 'id=com.apnatime.debug:id/tv_education_detail_info'.</msg>
+<status status="PASS" starttime="20211203 00:19:12.007" endtime="20211203 00:19:13.404"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:19:18.417" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211203 00:19:13.404" endtime="20211203 00:19:18.417"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/act_education_btn_continue</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:18.420" level="INFO">Clicking element 'id=com.apnatime.debug:id/act_education_btn_continue'.</msg>
+<status status="PASS" starttime="20211203 00:19:18.418" endtime="20211203 00:19:18.508"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:19:21.508" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:19:18.508" endtime="20211203 00:19:21.508"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Delivery Person"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:21.511" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="Delivery Person"]'.</msg>
+<status status="PASS" starttime="20211203 00:19:21.508" endtime="20211203 00:19:22.425"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Maid"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:22.429" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="Maid"]'.</msg>
+<status status="PASS" starttime="20211203 00:19:22.425" endtime="20211203 00:19:24.609"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Telecaller / BPO"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:24.613" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="Telecaller / BPO"]'.</msg>
+<status status="PASS" starttime="20211203 00:19:24.609" endtime="20211203 00:19:25.746"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:19:28.757" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:19:25.746" endtime="20211203 00:19:28.757"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/btn_save</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:28.759" level="INFO">Clicking element 'id=com.apnatime.debug:id/btn_save'.</msg>
+<status status="PASS" starttime="20211203 00:19:28.757" endtime="20211203 00:19:28.845"/>
+</kw>
+<status status="PASS" starttime="20211203 00:19:06.396" endtime="20211203 00:19:28.846"/>
+</kw>
+<status status="PASS" starttime="20211203 00:19:06.395" endtime="20211203 00:19:28.846"/>
+</test>
+<test id="s1-t6" name="User need to upload photo from Gallery">
+<kw name="Upload photo from gallery">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:19:31.857" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:19:28.851" endtime="20211203 00:19:31.857"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/tv_chose_from_gallery</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:31.860" level="INFO">Clicking element 'id=com.apnatime.debug:id/tv_chose_from_gallery'.</msg>
+<status status="PASS" starttime="20211203 00:19:31.857" endtime="20211203 00:19:31.978"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:19:34.990" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:19:31.978" endtime="20211203 00:19:34.991"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.android.permissioncontroller:id/permission_allow_button</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:34.996" level="INFO">Clicking element 'id=com.android.permissioncontroller:id/permission_allow_button'.</msg>
+<status status="PASS" starttime="20211203 00:19:34.991" endtime="20211203 00:19:35.080"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:19:38.090" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:19:35.080" endtime="20211203 00:19:38.090"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.google.android.apps.photos:id/image</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:38.092" level="INFO">Clicking element 'id=com.google.android.apps.photos:id/image'.</msg>
+<status status="PASS" starttime="20211203 00:19:38.090" endtime="20211203 00:19:38.155"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:19:41.169" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:19:38.156" endtime="20211203 00:19:41.169"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=Photo taken on Dec 2, 2021 11:32:59 PM</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:41.172" level="INFO">Clicking element 'accessibility_id=Photo taken on Dec 2, 2021 11:32:59 PM'.</msg>
+<status status="PASS" starttime="20211203 00:19:41.169" endtime="20211203 00:19:41.824"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:19:44.839" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:19:41.824" endtime="20211203 00:19:44.839"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/ucrop_btn_crop</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:44.843" level="INFO">Clicking element 'id=com.apnatime.debug:id/ucrop_btn_crop'.</msg>
+<status status="PASS" starttime="20211203 00:19:44.839" endtime="20211203 00:19:45.690"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:19:48.704" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:19:45.690" endtime="20211203 00:19:48.705"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/tv_change_photo</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:48.708" level="INFO">Clicking element 'id=com.apnatime.debug:id/tv_change_photo'.</msg>
+<status status="PASS" starttime="20211203 00:19:48.705" endtime="20211203 00:19:49.356"/>
+</kw>
+<status status="PASS" starttime="20211203 00:19:28.850" endtime="20211203 00:19:49.356"/>
+</kw>
+<status status="PASS" starttime="20211203 00:19:28.848" endtime="20211203 00:19:49.357"/>
+</test>
+<test id="s1-t7" name="User need to upload photo from Camera">
+<kw name="Upload from Camera">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:19:52.366" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:19:49.360" endtime="20211203 00:19:52.366"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/btm_sheet_img_pick_tvTakePhotoFromCamera</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:52.368" level="INFO">Clicking element 'id=com.apnatime.debug:id/btm_sheet_img_pick_tvTakePhotoFromCamera'.</msg>
+<status status="PASS" starttime="20211203 00:19:52.366" endtime="20211203 00:19:52.440"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:19:55.448" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:19:52.441" endtime="20211203 00:19:55.448"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.android.permissioncontroller:id/permission_allow_foreground_only_button</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:55.450" level="INFO">Clicking element 'id=com.android.permissioncontroller:id/permission_allow_foreground_only_button'.</msg>
+<status status="PASS" starttime="20211203 00:19:55.448" endtime="20211203 00:19:55.531"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:19:58.542" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:19:55.532" endtime="20211203 00:19:58.542"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.android.camera2:id/shutter_button</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:19:58.545" level="INFO">Clicking element 'id=com.android.camera2:id/shutter_button'.</msg>
+<status status="PASS" starttime="20211203 00:19:58.542" endtime="20211203 00:20:00.695"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:20:03.699" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:20:00.696" endtime="20211203 00:20:03.699"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.android.camera2:id/done_button</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:20:03.701" level="INFO">Clicking element 'id=com.android.camera2:id/done_button'.</msg>
+<status status="PASS" starttime="20211203 00:20:03.699" endtime="20211203 00:20:03.923"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:20:06.925" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:20:03.924" endtime="20211203 00:20:06.925"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/ucrop_btn_crop</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:20:06.927" level="INFO">Clicking element 'id=com.apnatime.debug:id/ucrop_btn_crop'.</msg>
+<status status="PASS" starttime="20211203 00:20:06.925" endtime="20211203 00:20:07.730"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:20:10.742" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:20:07.730" endtime="20211203 00:20:10.742"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/act_profile_info_btn_continue</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:20:10.744" level="INFO">Clicking element 'id=com.apnatime.debug:id/act_profile_info_btn_continue'.</msg>
+<status status="PASS" starttime="20211203 00:20:10.742" endtime="20211203 00:20:10.825"/>
+</kw>
+<status status="PASS" starttime="20211203 00:19:49.360" endtime="20211203 00:20:10.826"/>
+</kw>
+<status status="PASS" starttime="20211203 00:19:49.359" endtime="20211203 00:20:10.826"/>
+</test>
+<test id="s1-t8" name="User need to Capturing toast messages on Selecting the Job Categories more than 4 groups">
+<kw name="Capturing toast messages on Selecting the Job Categories more than 4 groups">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:20:13.837" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:20:10.830" endtime="20211203 00:20:13.837"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/tvSeeJobs</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:20:13.842" level="INFO">Clicking element 'id=com.apnatime.debug:id/tvSeeJobs'.</msg>
+<status status="PASS" starttime="20211203 00:20:13.837" endtime="20211203 00:20:13.963"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:20:23.976" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20211203 00:20:13.963" endtime="20211203 00:20:23.976"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/action_in_app_groups</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:20:23.979" level="INFO">Clicking element 'id=com.apnatime.debug:id/action_in_app_groups'.</msg>
+<status status="PASS" starttime="20211203 00:20:23.976" endtime="20211203 00:20:24.227"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:20:27.239" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:20:24.227" endtime="20211203 00:20:27.239"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/ic_move_next</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:20:27.243" level="INFO">Clicking element 'id=com.apnatime.debug:id/ic_move_next'.</msg>
+<status status="PASS" starttime="20211203 00:20:27.239" endtime="20211203 00:20:27.370"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:20:30.377" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:20:27.370" endtime="20211203 00:20:30.377"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/ic_move_next</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:20:30.379" level="INFO">Clicking element 'id=com.apnatime.debug:id/ic_move_next'.</msg>
+<status status="PASS" starttime="20211203 00:20:30.377" endtime="20211203 00:20:30.461"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:20:33.468" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:20:30.462" endtime="20211203 00:20:33.468"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/tv_done</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:20:33.474" level="INFO">Clicking element 'id=com.apnatime.debug:id/tv_done'.</msg>
+<status status="PASS" starttime="20211203 00:20:33.469" endtime="20211203 00:20:35.756"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:20:38.764" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:20:35.756" endtime="20211203 00:20:38.764"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/tv_change_group</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:20:38.766" level="INFO">Clicking element 'id=com.apnatime.debug:id/tv_change_group'.</msg>
+<status status="PASS" starttime="20211203 00:20:38.764" endtime="20211203 00:20:38.873"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:20:41.887" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:20:38.874" endtime="20211203 00:20:41.887"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="JOIN"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:20:41.890" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="JOIN"]'.</msg>
+<status status="PASS" starttime="20211203 00:20:41.887" endtime="20211203 00:20:42.958"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:20:45.971" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:20:42.959" endtime="20211203 00:20:45.971"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="JOIN"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:20:45.972" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="JOIN"]'.</msg>
+<status status="PASS" starttime="20211203 00:20:45.971" endtime="20211203 00:20:46.191"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:20:49.198" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:20:46.191" endtime="20211203 00:20:49.198"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="JOIN"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:20:49.201" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="JOIN"]'.</msg>
+<status status="PASS" starttime="20211203 00:20:49.199" endtime="20211203 00:20:49.924"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:20:52.929" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:20:49.924" endtime="20211203 00:20:52.929"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="JOIN"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:20:52.932" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="JOIN"]'.</msg>
+<status status="PASS" starttime="20211203 00:20:52.929" endtime="20211203 00:20:53.155"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:20:56.162" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:20:53.156" endtime="20211203 00:20:56.162"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="JOIN"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:20:56.165" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="JOIN"]'.</msg>
+<status status="PASS" starttime="20211203 00:20:56.162" endtime="20211203 00:20:56.392"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<arg>toast_message.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20211203 00:20:57.068" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="toast_message.png"&gt;&lt;img src="toast_message.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211203 00:20:56.392" endtime="20211203 00:20:57.068"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:21:00.083" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:20:57.068" endtime="20211203 00:21:00.083"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="JOIN"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:21:00.085" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="JOIN"]'.</msg>
+<status status="PASS" starttime="20211203 00:21:00.083" endtime="20211203 00:21:01.327"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<arg>toast_message1.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20211203 00:21:01.736" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="toast_message1.png"&gt;&lt;img src="toast_message1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211203 00:21:01.327" endtime="20211203 00:21:01.736"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<arg>toast_message2.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20211203 00:21:02.397" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="toast_message2.png"&gt;&lt;img src="toast_message2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211203 00:21:01.736" endtime="20211203 00:21:02.397"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:21:05.408" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:21:02.397" endtime="20211203 00:21:05.408"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/iv_back</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:21:05.410" level="INFO">Clicking element 'id=com.apnatime.debug:id/iv_back'.</msg>
+<status status="PASS" starttime="20211203 00:21:05.408" endtime="20211203 00:21:05.543"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:21:08.554" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:21:05.543" endtime="20211203 00:21:08.554"/>
+</kw>
+<status status="PASS" starttime="20211203 00:20:10.830" endtime="20211203 00:21:08.555"/>
+</kw>
+<status status="PASS" starttime="20211203 00:20:10.828" endtime="20211203 00:21:08.556"/>
+</test>
+<test id="s1-t9" name="User need to Connect with Friends, Overlay screens">
+<kw name="Connect with Friends, Overlay screens">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:21:11.574" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:21:08.562" endtime="20211203 00:21:11.574"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/action_view_friends</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:21:11.578" level="INFO">Clicking element 'id=com.apnatime.debug:id/action_view_friends'.</msg>
+<status status="PASS" starttime="20211203 00:21:11.574" endtime="20211203 00:21:11.736"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:21:14.742" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:21:11.737" endtime="20211203 00:21:14.742"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/ic_move_next</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:21:14.748" level="INFO">Clicking element 'id=com.apnatime.debug:id/ic_move_next'.</msg>
+<status status="PASS" starttime="20211203 00:21:14.743" endtime="20211203 00:21:14.907"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:21:17.910" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:21:14.908" endtime="20211203 00:21:17.910"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/ic_move_next</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:21:17.914" level="INFO">Clicking element 'id=com.apnatime.debug:id/ic_move_next'.</msg>
+<status status="PASS" starttime="20211203 00:21:17.910" endtime="20211203 00:21:18.031"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:21:21.035" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:21:18.032" endtime="20211203 00:21:21.035"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.apnatime.debug:id/tv_done</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:21:21.037" level="INFO">Clicking element 'id=com.apnatime.debug:id/tv_done'.</msg>
+<status status="PASS" starttime="20211203 00:21:21.035" endtime="20211203 00:21:22.112"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:21:25.121" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:21:22.112" endtime="20211203 00:21:25.121"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<arg>overlay_screen.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20211203 00:21:26.190" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="overlay_screen.png"&gt;&lt;img src="overlay_screen.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211203 00:21:25.121" endtime="20211203 00:21:26.190"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211203 00:21:29.196" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211203 00:21:26.191" endtime="20211203 00:21:29.196"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Connect"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211203 00:21:29.199" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="Connect"]'.</msg>
+<status status="PASS" starttime="20211203 00:21:29.196" endtime="20211203 00:21:29.503"/>
+</kw>
+<status status="PASS" starttime="20211203 00:21:08.562" endtime="20211203 00:21:29.504"/>
+</kw>
+<status status="PASS" starttime="20211203 00:21:08.560" endtime="20211203 00:21:29.504"/>
+</test>
+<status status="PASS" starttime="20211203 00:17:22.794" endtime="20211203 00:21:29.506"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="9" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
